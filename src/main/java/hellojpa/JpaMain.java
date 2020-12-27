@@ -22,7 +22,6 @@ public class JpaMain {
             em.persist(m2);
 
             Member member = em.find(Member.class, 9L);
-            System.out.println("member.getName() = " + member.getName());
 
             System.out.println("===================");
 
@@ -32,7 +31,7 @@ public class JpaMain {
 
             System.out.println("------------------");
 
-            
+
             tx.commit();
             em.find(Member.class, 9L);
         } catch (Exception e) {
